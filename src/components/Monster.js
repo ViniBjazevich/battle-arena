@@ -7,12 +7,20 @@ export default function Monster({
   setTurn,
   setBattleLog,
   opponent,
+  setOpponentTeam,
+  setMyTeam,
 }) {
-
   return (
     <div>
       <div>{monster.name}</div>
-      <div>{monster.stats.health}</div>
+      <div style={{ display: "flex" }}>
+        <progress id="file" max={monster.stats.health} value={monster.health}>
+          {monster.health}
+        </progress>
+        <div>{monster.health}</div>
+        <div>/</div>
+        <div>{monster.stats.health}</div>
+      </div>
       <div>
         {turn === monster.name && (
           <MoveSet
@@ -21,6 +29,8 @@ export default function Monster({
             moves={monster.move_set}
             setTurn={setTurn}
             opponent={opponent}
+            setOpponentTeam={setOpponentTeam}
+            setMyTeam={setMyTeam}
           />
         )}
       </div>

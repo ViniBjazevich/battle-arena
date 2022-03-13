@@ -1,7 +1,9 @@
-const pokemon = [
+const team1 = [
   {
     name: "Lizard",
     level: 50,
+    health: 153,
+    type: null,
     stats: {
       health: 153,
       physical_attack: 104,
@@ -46,9 +48,14 @@ const pokemon = [
       },
     ],
   },
+];
+
+const team2 = [
   {
     name: "Squid",
     level: 50,
+    health: 154,
+    type: null,
     stats: {
       health: 154,
       physical_attack: 103,
@@ -95,4 +102,7 @@ const pokemon = [
   },
 ];
 
-module.exports = pokemon;
+module.exports = {
+  team1,
+  team2
+};

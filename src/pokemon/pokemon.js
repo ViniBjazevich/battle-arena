@@ -1,71 +1,89 @@
 const pokemon = [
   {
     name: "Lizard",
+    level: 50,
     stats: {
-      health: 88,
-      attack: 43,
-      defense: 92,
-      special_attack: 23,
-      special_defense: 44,
-      speed: 99,
+      health: 153,
+      physical_attack: 104,
+      physical_defense: 98,
+      special_attack: 129,
+      special_defense: 105,
+      speed: 120,
     },
-    move_set: {
-      bite: {
+    move_set: [
+      {
+        name: "bite",
+        technique: "physical_attack",
         power: 40,
         priority: false,
         buffs: false,
       },
-      "tail slap": {
+      {
+        name: "reptile blast",
+        technique: "special_attack",
         power: 50,
         priority: false,
         buffs: false,
       },
-      rest: {
-        power: 40,
+      {
+        name: "rest",
+        technique: "magic",
+        power: 0,
         priority: false,
         buffs: {
           health: 0.5,
         },
       },
-      focus: {
-        power: 40,
+      {
+        name: "focus",
+        technique: "magic",
+        power: 0,
         priority: false,
         buffs: {
           attack: 0.25,
           defense: 0.25,
         },
       },
-    },
+    ],
   },
   {
     name: "Squid",
+    level: 50,
     stats: {
-      health: 88,
-      attack: 43,
-      defense: 92,
-      special_attack: 23,
-      special_defense: 44,
-      speed: 99,
+      health: 154,
+      physical_attack: 103,
+      physical_defense: 120,
+      special_attack: 105,
+      special_defense: 125,
+      speed: 98,
     },
-    move_set: {
-      squeeze: {
+    move_set: [
+      {
+        name: "drown",
+        technique: "special_attack",
         power: 40,
         priority: false,
         buffs: false,
       },
-      drown: {
-        power: 60,
+      {
+        name: "sqeeze",
+        technique: "physical_attack",
+        power: 50,
         priority: false,
         buffs: false,
       },
-      rest: {
+      {
+        name: "rest",
+        technique: "magic",
         power: 40,
         priority: false,
         buffs: {
           health: 0.5,
         },
       },
-      focus: {
+      {
+        name: "focus",
+        technique: "magic",
         power: 40,
         priority: false,
         buffs: {
@@ -73,7 +91,7 @@ const pokemon = [
           defense: 0.25,
         },
       },
-    },
+    ],
   },
 ];
 

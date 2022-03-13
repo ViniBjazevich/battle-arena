@@ -1,5 +1,5 @@
 import React from "react";
-import { calculateDamage } from "../utils/calculations";
+import { calculateDamage } from "../../utils/calculations";
 
 export default function MoveSet({
   monster,
@@ -11,7 +11,6 @@ export default function MoveSet({
   setMyTeam,
 }) {
   function handleAttack(move) {
-    console.log(monster, opponent, move);
     const damage = calculateDamage(monster, opponent, move);
 
     setOpponentTeam((prev) => {
@@ -21,19 +20,17 @@ export default function MoveSet({
         prev.party[prev.inBattle].health -= damage;
       }
       return prev;
-    })
+    });
 
     setBattleLog((prev) => {
       let logs = [...prev];
       let logEntry = `${monster.name} used ${move.name}. ${opponent.name} took ${damage} damage.`;
 
       if (!opponent.health) {
-        logEntry += `${opponent.name} has fainted.`
+        logEntry += ` ${opponent.name} has fainted.`;
       }
 
-      logs.push(
-        logEntry
-      );
+      logs.push(logEntry);
       return logs;
     });
 

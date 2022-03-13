@@ -1,5 +1,5 @@
 import "./App.css";
-import BattleArena from "./components/BattleArena";
+import BattleArena from "./components/Battle/BattleArena";
 
 export default function App() {
   return (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Monster from "../components/Monster";
-import { team1, team2 } from "../pokemon/pokemon";
+import Monster from "./Monster";
+import { team1, team2 } from "../../monsterData";
 
 export default function BattleArena() {
   const [turn, setTurn] = useState(
@@ -15,12 +15,10 @@ export default function BattleArena() {
     party: team2,
   });
   const [battleLog, setBattleLog] = useState([]);
-  console.log(battleLog)
 
   return (
     <div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        {console.log(leftTeam, rightTeam)}
         <Monster
           monster={leftTeam.party[leftTeam.inBattle]}
           setTurn={setTurn}
